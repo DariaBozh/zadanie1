@@ -27,5 +27,14 @@ void nahodny_rastuci_retazec(char *str){
 }
 
 int main(){
+	srand((unsigned)time(NULL));
+	
+	char retazec[11] = "abcdefghij"; // 10 znakov + '\0'
+	printf("Povodny: %s\n", retazec);
+	
+	nahodny_rastuci_retazec(retazec);
+	printf("Rastuci: %s\n", retazec);
+	
+	return 0;
 	
 }
