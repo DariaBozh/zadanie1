@@ -17,8 +17,10 @@ char nahodny_znak (char min){
 
 // funkcia prepisuje str nahodnym rastucim retazcem rovnakej dlzky
 void nahodny_rastuci_retazec(char *str){
+	if (!str) return;
+	
 	char min = '0'; //majmensi povoleny znak
-	for(int i = 0; str[i]; i++){
+	for(size_t i = 0; str[i]; i++){
 		str[i] = nahodny_znak(min);
 		min = str[i]; //aktualizacia minimumu
 	}
