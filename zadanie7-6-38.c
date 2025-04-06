@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <time.h>
 
 #define ALPHANUM "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
@@ -27,7 +26,7 @@ void nahodny_rastuci_retazec(char *str){
 }
 
 int main(){
-	srand((unsigned)time(NULL));
+	srand(time(NULL));
 	
 	char retazec[11] = "abcdefghij"; // 10 znakov + '\0'
 	printf("Povodny: %s\n", retazec);
